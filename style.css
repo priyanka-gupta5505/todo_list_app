@@ -1,0 +1,289 @@
+/* Removing default margin and padding */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Setting poppins as font */
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Class for flex box */
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/* Material Icons style */
+.material-icons-outlined {
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
+/* Container class */
+.container {
+  min-height: 100vh;
+  background-color: #d2d6dd;
+}
+
+/* Opacity classes */
+.op-1 {
+  opacity: 1;
+}
+
+.op-0 {
+  opacity: 0;
+}
+
+/* Todo container the white box with shadow */
+.todo-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-shadow: 0 0 0 8px #c7c7cc;
+          box-shadow: 0 0 0 8px #c7c7cc;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Button class */
+.btn {
+  outline: none;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+/* Border bottom class */
+.b-bt {
+  border-bottom: 1px solid #ded8d8;
+}
+
+/* form class */
+.form {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: #ebebeb;
+  border-radius: 10px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* on hovera and focus effect on add button of form */
+.form:hover .btn,
+.form:focus .btn {
+  opacity: 1;
+}
+
+/* Form input style */
+.form input {
+  outline: none;
+  background-color: inherit;
+  border: none;
+  width: 80%;
+  padding-left: 2rem;
+  line-height: 2;
+}
+
+/* todo icon */
+.form .todo-icon {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+/* Add button style */
+.form .btn {
+  font-size: 1.3rem;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* 
+ * Todo actions (clear completed, completea all) 
+ * Filter actions(show all, completed, uncompleted)
+ * container styles
+ */
+.todo-actions,
+.filter-todos {
+  padding: 0.5rem;
+  color: gray;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+/* complete all button hover and focus effect */
+.todo-actions .complete-all:hover, .todo-actions .complete-all:focus {
+  color: dodgerblue;
+}
+
+/* clear completed button hover and focus effect */
+.todo-actions .clear-completed:hover, .todo-actions .clear-completed:focus {
+  color: crimson;
+}
+
+/* contains all todos styles */
+.todo-list {
+  padding: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  width: 100%;
+  max-width: 100%;
+  height: 85%;
+  overflow: auto;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* completed todos styles */
+.todo-list .completed {
+  opacity: 0.7;
+}
+
+.todo-list .completed .btn.complete {
+  color: dodgerblue;
+}
+
+.todo-list .completed .task {
+  text-decoration: line-through;
+}
+
+/* todo styles */
+.todo-list .todo {
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.todo-list .todo .material-icons-outlined {
+  position: absolute;
+  width: 25px;
+  top: 20%;
+  right: 0;
+}
+
+.todo-list .todo .left {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.todo-list .todo .left .material-icons-outlined {
+  position: absolute;
+  top: 20%;
+  left: 0;
+}
+
+.todo-list .todo .task {
+  margin-left: 1.5rem;
+  word-wrap: break-word;
+  width: 80%;
+  overflow: auto;
+}
+
+/* transiton on complete radio button */
+.todo-list .todo .complete {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+/* complete buutton hover and focus effect */
+.todo-list .todo .complete:hover, .todo-list .todo .complete:focus {
+  color: dodgerblue;
+}
+
+/* delete buttton of a todo */
+.todo-list .todo .delete {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* delete button hover and focus effect */
+.todo-list .todo .delete:hover, .todo-list .todo .delete:focus {
+  color: crimson;
+}
+
+/* show delete button on hover a todo */
+.todo-list .todo:hover .delete,
+.todo-list .todo:focus .delete {
+  opacity: 1;
+}
+
+/* totoal todos  */
+.filter-todos #total {
+  color: #000;
+}
+
+/* show button (all, completed, uncompleted) */
+.filter-todos .filter-actions .btn {
+  margin-left: 0.5rem;
+}
+
+/* class to show selected button */
+.filter-todos .filter-actions .active {
+  color: #000;
+}
+
+/* style of devices of screen size greater than 768px */
+@media only screen and (min-width: 768px) {
+  /* adding padding to container */
+  .container {
+    padding: 2rem;
+  }
+  /* setting width of todocontainer to 30rem */
+  .todo-container {
+    width: 30rem;
+    height: 87vh;
+  }
+
+  /* scrollbar style */
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #f5f5f5;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+    background-color: #f5f5f5;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(grey), to(grey));
+    background-image: linear-gradient(grey, grey);
+  }
+}

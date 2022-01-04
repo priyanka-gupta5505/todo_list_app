@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+
+    <!-- Material Icons css link -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round"
+        rel="stylesheet" />
+
+    <!-- Google poppins font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Container -->
+    <div class="container d-flex">
+
+        <!-- Todo Container -->
+        <div class="todo-container d-flex">
+
+            <!-- Form to create Todo -->
+            <div class="form">
+                <form class class="add-todo-form">
+
+                    <!-- Icon -->
+                    <span class="material-icons-outlined todo-icon">
+                        description
+                    </span>
+
+                    <!-- input -->
+                    <input type="text" autocomplete="off" required placeholder="Type your todo list" id="todo-content">
+
+                    <!-- Add button -->
+                    <button type="submit" id="add-todo" class="btn">
+                        <span class="material-icons-outlined">
+                            add_circle_outline
+                        </span>
+                    </button>
+                </form>
+            </div>
+            <!-- End Form to create Todo -->
+
+            <!-- Todo actions complete all and clear completed -->
+            <div class="todo-actions d-flex b-bt ">
+
+                <!-- complete all button -->
+                <div class="btn complete-all">
+                    <span class="material-icons-outlined">
+                        done_all
+                    </span>
+                    Complete all tasks
+                </div>
+
+                <!-- clear complete button -->
+                <div class="btn clear-completed">Clear completed</div>
+            </div>
+            <!-- End Todo actions complete all and clear completed -->
+
+            <!-- Todo container -->
+            <div class="todo-list b-bt">
+
+            </div>
+            <!-- End Todo container -->
+
+            <!-- Filter actions -->
+            <div class="filter-todos d-flex">
+
+                <!-- Totoal tasks -->
+                <div class="total-tasks">
+                    <span id="total">0</span> tasks left
+                </div>
+
+                <!-- filter action buttons -->
+                <div class="filter-actions d-flex">
+
+                    <!-- show all todos -->
+                    <div data-show="all" class="show btn active">All</div>
+
+                    <!-- show Uncompleted todos -->
+                    <div data-show="uncompleted" class="show btn">Uncompleted</div>
+
+                    <!-- show completed todos -->
+                    <div data-show="completed" class="show btn">Completed</div>
+                </div>
+                <!-- End filter action buttons -->
+
+            </div>
+            <!-- End Filter actions -->
+
+        </div>
+        <!-- End Todo Container -->
+
+    </div>
+    <!-- End Container -->
+
+    <!-- javascript file -->
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
